@@ -112,6 +112,7 @@ a:hover {
 }
 .sidebar {
   position: fixed;
+  transition: all 0.5s;
   /* with these two lines keep sidebar out of the ascreen */
   transform: translateX(-30rem);
   width: 30rem;
