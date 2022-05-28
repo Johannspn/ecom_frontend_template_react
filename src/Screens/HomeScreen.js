@@ -1,8 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const loading = false;
+// another way for css style
+// const mystyle = {
+//   color: "white",
+//   backgroundColor: "DodgerBlue",
+//   padding: "10px",
+//   fontFamily: "Arial"
+// };
+// <h1 style={mystyle}>Hello Style!</h1>
+
 function HomeScreen() {
-  return (
+  return loading ? (
+    <div>
+      <div className="loader"></div>
+    </div>
+  ) : (
     <ul className="products">
       <li>
         <div className="product">
