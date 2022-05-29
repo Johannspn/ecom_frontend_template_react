@@ -3,6 +3,8 @@ import './App.css';
 import CartScreen from './Screens/CartScreen';
 import HomeScreen from './Screens/HomeScreen';
 import ProductScreen from './Screens/ProductScreen';
+import RegisterScreen from './Screens/RegisterScreen';
+import SigninScreen from './Screens/SigninScreen';
 
 function App() {
   const openMenu = () => {
@@ -11,6 +13,7 @@ function App() {
   const closeMenu = () => {
     document.querySelector('.sidebar').classList.remove('open');
   };
+  const userInfo = true;
   return (
     <BrowserRouter>
       <div className="grid-container">
@@ -21,7 +24,11 @@ function App() {
           </div>
           <div className="header-links">
             <Link to="/cart">Cart</Link>
-            <Link to="signin.html">Sign In</Link>
+            {userInfo ? (
+              <Link to="/profile">info.name</Link>
+            ) : (
+              <Link to="/signin">Sign In</Link>
+            )}
           </div>
         </header>
         <aside className="sidebar">
@@ -43,6 +50,8 @@ function App() {
         <main className="main">
           <div className="content">
             <Routes>
+              <Route path="/register" element={<RegisterScreen />} />
+              <Route path="/signin" element={<SigninScreen />} />
               <Route path="/product/:id" element={<ProductScreen />} />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/" element={<HomeScreen />} />
