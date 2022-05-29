@@ -1,5 +1,6 @@
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import './App.css';
+import CartScreen from './Screens/CartScreen';
 import HomeScreen from './Screens/HomeScreen';
 import ProductScreen from './Screens/ProductScreen';
 
@@ -19,7 +20,7 @@ function App() {
             <Link to="/">amazona</Link>
           </div>
           <div className="header-links">
-            <Link to="cart.html">Cart</Link>
+            <Link to="/cart">Cart</Link>
             <Link to="signin.html">Sign In</Link>
           </div>
         </header>
@@ -43,6 +44,7 @@ function App() {
           <div className="content">
             <Routes>
               <Route path="/product/:id" element={<ProductScreen />} />
+              <Route path="/cart" element={<CartScreen />} />
               <Route path="/" element={<HomeScreen />} />
             </Routes>
           </div>
