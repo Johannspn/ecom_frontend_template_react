@@ -2,9 +2,12 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import CartScreen from './Screens/CartScreen';
 import HomeScreen from './Screens/HomeScreen';
+import PaymentScreen from './Screens/PaymentScreen';
+import PlaceOrderScreen from './Screens/PlaceOrderScreen';
 import ProductScreen from './Screens/ProductScreen';
 import ProductsScreen from './Screens/ProductsScreen';
 import RegisterScreen from './Screens/RegisterScreen';
+import ShippingScreen from './Screens/ShippingScreen';
 import SigninScreen from './Screens/SigninScreen';
 
 function App() {
@@ -52,6 +55,9 @@ function App() {
           <div className="content">
             <Routes>
               <Route path="/products" element={<ProductsScreen />} />
+              <Route path="/shipping" element={<ShippingScreen />} />
+              <Route path="/payment" element={<PaymentScreen />} />
+              <Route path="/placeorder" element={<PlaceOrderScreen />} />
               <Route path="/register" element={<RegisterScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/product/:id" element={<ProductScreen />} />

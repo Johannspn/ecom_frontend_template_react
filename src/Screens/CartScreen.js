@@ -68,7 +68,9 @@ function CartScreen() {
           className="button primary full-width"
           disabled={cartItems.length === 0}
         >
-          Proceed to Checkout
+          {/* Proceed to Checkout */}
+          {/* here must be completed for checking sign in or register*/}
+          <Link to="/shipping">Proceed to Checkout</Link>
         </button>
       </div>
     </div>
