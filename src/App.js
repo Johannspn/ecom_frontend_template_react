@@ -3,6 +3,7 @@ import './App.css';
 import CartScreen from './Screens/CartScreen';
 import HomeScreen from './Screens/HomeScreen';
 import ProductScreen from './Screens/ProductScreen';
+import ProductsScreen from './Screens/ProductsScreen';
 import RegisterScreen from './Screens/RegisterScreen';
 import SigninScreen from './Screens/SigninScreen';
 
@@ -50,6 +51,7 @@ function App() {
         <main className="main">
           <div className="content">
             <Routes>
+              <Route path="/products" element={<ProductsScreen />} />
               <Route path="/register" element={<RegisterScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/product/:id" element={<ProductScreen />} />
